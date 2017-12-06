@@ -1,0 +1,67 @@
+.Todoform{
+  background-color: darkgray;
+
+}
+.Inputbox{
+   background-color: white;
+    box-shadow: 3px 3px #00;
+    width:50%;
+    height:15%;
+    opacity:0.5;
+    margin-top:9px;
+    padding:10px;
+    color:black;
+    font-weight:bolder;
+    letter-spacing:2px;
+    float:center;
+    border:2px solid black;
+    font-size:20px;
+    overflow:hidden;
+    margin-left:5px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+   margin-bottom:20px;
+}
+.ButtonAdd{
+  background-color: black;
+  color:white;
+  opacity:0.5;
+  border:none;
+  height:48px;
+  width:12%;
+  margin-top:10px;
+  font-size:14px;
+  font-weight:bolder;
+  border:2px solid white;
+  letter-spacing: 5px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
