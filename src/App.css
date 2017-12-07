@@ -1,41 +1,229 @@
 .Todoform{
-  background-color: darkgray;
+  background-color: #330000;
 
+}
+.todoitem:hover{
+  background-color: #ddd;
+}
+.FormContainer{
+  padding:15px;
+  background-color: black;
+}
+.NoteContainer{
+  padding:5px;
+  background-color: darkgray;
+  height:30px;
 }
 .Inputbox{
    background-color: white;
-    box-shadow: 3px 3px #00;
-    width:50%;
-    height:15%;
-    opacity:0.5;
-    margin-top:9px;
-    padding:10px;
-    color:black;
-    font-weight:bolder;
-    letter-spacing:2px;
-    float:center;
-    border:2px solid black;
-    font-size:20px;
-    overflow:hidden;
-    margin-left:5px;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-   margin-bottom:20px;
+   opacity:0.5;
+   box-shadow: 3px 3px #00;
+   padding:8px;
+   color:black;
+   font-weight:bolder;
+   letter-spacing:2px;
+   width:350px;
+   border-bottom-left-radius: 15px;
+   border-top-left-radius: 15px;
+   padding-left:30px;
 }
 .ButtonAdd{
   background-color: black;
   color:white;
-  opacity:0.5;
-  border:none;
-  height:48px;
-  width:12%;
-  margin-top:10px;
-  font-size:14px;
   font-weight:bolder;
-  border:2px solid white;
+  letter-spacing:2px;
+  padding:8px;
+  box-shadow: 3px 3px #00;
+  opacity:0.5;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.ButtonAdd:hover{
+    background-color: maroon;
+  color:white;
+}
+.todoitem{
+  background-color: white;
+  color:black;
+  width:100%;
+  opacity:0.7;
+  border-left:5px solid gray;
+
+}
+.noteitem{
+  text-align:left;
+  padding-left:10px;
+  padding-top: 5px;
+  width:200px;
+  margin-top: 5px;
+}
+.n {
+  width:50px;
+  }
+.notetext{
+  width:57%;
+  background-color: gray;
+  padding-left:10px;
+
+}
+.notebutton{
+  width:30%;
+  background-color: gray;
+
+}
+.Completebtn{
+ background-color: black;
+  color:white;
+  font-weight:bolder;
+  letter-spacing:2px;
+  padding:8px;
+  box-shadow: 3px 3px #00;
+  opacity:0.5;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.Removebtn{
+ background-color: black;
+  color:white;
+  font-weight:bolder;
+  letter-spacing:2px;
+  padding:8px;
+  box-shadow: 3px 3px #00;
+  opacity:0.5;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.NoteHeader{
+  background-color: transparent;
+  width:50%;
+  margin-left:300px;
+  font-size:25px;
   letter-spacing: 5px;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
+  font-family:Berlin Sans FB;
+  text-shadow:2px 2px 2px white ;
+  color:maroon;
+}
+.MainHeader{
+  background-size: 100% 100%;
+  background-image:url('./images/background.jpg');
+  font-size:35px;
+  letter-spacing: 5px;
+  font-family:Century Gothic;
+  text-shadow:2px 2px 2px white ;
+  color:navy;
+  font-weight:bolder;
+  height:120px;
+  padding-top: 1px;
+}
+.MainTitle{
+
+
+}
+.NoteContainer{
+  /*background-image: url('./images/note2.jpg');*/
+  height:500px;
+  width:50%;  
+  color:black;
+  margin-left:25%;
+  overflow:auto;
+}
+.StatusContainer{
+  /*background-image: url('./images/note2.jpg');*/
+  width:50%;  
+  color:black;
+  margin-left:25%;
+  overflow:auto;
+  background-color: darkgray;
+  text-align:left;
+  padding-left:10px;
+  background-color: #5c5c3d;
+  border-bottom: 5px solid  black;
+  height:50px;
+  padding-top:15px;
+}
+.Stat{
+  color:black;
+  font-size:16px;
+  letter-spacing: 2px;
+  font-family: Century;
+  font-weight:bolder;
+}
+.allStat{
+   color:maroon;
+  font-size:18px;
+  letter-spacing: 2px;
+  font-family: Century;
+  font-weight:bolder;
+  margin-left:70px;
+  text-shadow:1px 1px 1px white;
+
+}
+.activeStat{
+   color:maroon;
+  font-size:18px;
+  letter-spacing: 2px;
+  font-family: Century;
+  font-weight:bolder;
+  margin-left:70px;
+  text-shadow:1px 1px 1px white;
+}
+.completedStat{
+     color:maroon;
+  font-size:18px;
+  letter-spacing: 2px;
+  font-family: Century;
+  font-weight:bolder;
+  margin-left:70px;
+  text-shadow:1px 1px 1px white;
+}
+.checkbox{
+  float:left; 
+  height:20px;
+  border:2px solid black;
+}
+.Notes{
+  height:auto;
+  width:400px;
+  margin-top:30px;
+  font-size:12px;
+  overflow:auto;
+  color:black;
+  margin-bottom:20px; 
+}
+.noteItem{
+  text-align:left;
+  margin-left:120px;
+  margin-top:76.5px;
+
+
+}
+.noteItems{
+  text-align:left;
+  margin-left:5px;
+   background-size: 100% 100%;
+   width:465px;
+   border:1px solid black;
+   padding:5px;
+   overflow:auto;
+   color:black; 
+   margin-top:3px;
+   margin-left:40px;
+   background-color: white;
+}
+
+.NoteTextContainer{
+  overflow:hidden;
+}
+.ButtonComplete{
+  background-color: black;
+  color:white;
+  float:right;
+}
+.ButtonRemove{
+  background-color: black;
+  color:white;
+  float:right;
 }
 .App {
   text-align: center;
@@ -48,9 +236,8 @@
 
 .App-header {
   background-color: #222;
-
   padding: 20px;
-  color: white;
+
 }
 
 .App-title {
