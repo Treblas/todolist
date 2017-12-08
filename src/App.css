@@ -5,6 +5,17 @@
 .todoitem:hover{
   background-color: #ddd;
 }
+.todonote{
+  text-decoration:none;
+}
+
+/*.checkbox:checked + label{
+    text-decoration: line-through;
+}
+.text{
+   text-decoration: none;
+   color:red;
+}*/
 .FormContainer{
   padding:15px;
   background-color: black;
@@ -180,7 +191,7 @@
 .checkbox{
   float:left; 
   height:20px;
-  border:2px solid black;
+  border:2px solid  black;
 }
 .Notes{
   height:auto;

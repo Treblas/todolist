@@ -4,22 +4,20 @@ import Todoform from './Components/Todoform'
 import './App.css';
 
 class App extends Component {
-   state = {
-      search: '',
+   state = {  
       details: {},
       notes: [],
       note: '',
       todoid: 1,
-      status: 'Active',
+      status: '',
       counter: 0,
-      countAll: 0
+      completed:0,
 
   }
    handleChange(prop, e){
     this.setState({[prop]: e.target.value })
   }
-  
-  removeTodo(name, i){
+ removeTodo(name, i){
     this.setState({
       counter: this.state.counter - 1
     })
@@ -29,56 +27,41 @@ class App extends Component {
       notes
     })
   }
+
   handleSave(){
-      var obj ={
-       //id:   this.state.details.id,
+       var obj ={
         note: this.state.note,
         todoid: this.state.todoid,
         status: this.state.status,
-        counter: this.state.counter + 1
-
+        counter: this.state.counter + 1,   
       }
       this.setState({
        notes: this.state.notes.concat(obj),
        note: '',
        todoid: this.state.todoid + 1,
-       status: this.state.status,
-       counter:  this.state.counter + 1 
-     })
-     //const {details, note, notes} = this.state
-
-  }
-
-  handleCompleted(){
-    
-     var complete = 'Completed'
-     var completeobj ={
-      counter: this.state.counter ,
-      status: this.state.status
-    }
-    this.setState({
-       counter:  this.state.counter - 1 ,
-      notes: this.state.notes = 'Completed'
-      // status: ({this.state.status: , 'Completed'})
-
-
+       status: false,
+       counter:  this.state.counter + 1 ,      
      })
   }
-  handleRemove(){
-    var todolist = this.state.notes;
-    var removeobj ={
-      counter: this.state.counter 
-
-    }
+  handleCompleted(msg){
+   //var counts = this.state.counter > 1 ? 0 : this.state.counter == 0 ? 0 : -1; 
+    var newList = this.state.notes.map(item => {
+    const itemSelected = item.todoid  === msg.todoid
+    if(itemSelected) item.status = !item.status
+     // var counts = this.state.status ? this.state.counter - 1 : this.state.counter + 1 
+    return item
+      })
     this.setState({
-       counter:  this.state.counter - 1 
-     })
+      counter:  this.state.counter - 1 ,
+      completed: ("Completed:", this.state.completed + 1)
+     //status: !this.state.status ? this.state.counter + 1 : this.state.counter - 1 
+    })
+     console.log(msg)
   }
   render() {
       console.log('Todo List :', this.state.notes)
       console.log('Counter :', this.state.counter)
-
-
+      console.log('Completed Tasks :', this.state.completed)
     return (
       <div className="App">
         <header className="App-header">
@@ -89,12 +72,11 @@ class App extends Component {
                details={this.state.details}
                note={this.state.note}
                counter={this.state.counter}
-               handleRemove={this.handleRemove.bind(this, 'counter')}
                handleCompleted={this.handleCompleted.bind(this)}
                removeTodo={this.removeTodo.bind(this, 'counter')}
                id={this.state.todoid}
+               complete={this.state.complete}
            />
-
         </header> 
       </div>
     );
